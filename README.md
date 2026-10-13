@@ -49,3 +49,38 @@ KDBS 웹사이트 저장소입니다.
 |---|---|---|
 | 키컬러 (레드 오렌지) | `#E8380D` | 심볼, 강조 요소 |
 | 포인트 컬러 (잉크 네이비) | `#14213D` | 워드마크, 텍스트, 어두운 배경 |
+
+## 디자인 시스템
+
+`design-system/` 폴더에 웹사이트·문서·콘솔이 함께 쓰는 토큰과 컴포넌트 CSS가 있습니다.
+
+| 파일 | 내용 |
+|---|---|
+| `tokens.json` | 토큰 원본 (컬러 라이트/다크, 타이포, 간격, 라운드, 그림자) |
+| `tokens.css` | `tokens.json`에서 생성한 CSS 변수와 `@font-face`. **직접 수정하지 않습니다.** |
+| `components.css` | 컴포넌트 클래스 (`kd-btn`, `kd-input`, `kd-badge`, `kd-card`, `kd-code`, `kd-callout`, `kd-table`) |
+| `fonts/` | Sora, Pretendard, JetBrains Mono 가변 폰트와 라이선스(SIL OFL 1.1) |
+| `build_css.py` | `tokens.json` → `tokens.css` 생성 스크립트 |
+
+### 사용법
+
+```html
+<link rel="stylesheet" href="/design-system/tokens.css">
+<link rel="stylesheet" href="/design-system/components.css">
+
+<body class="kd-root">
+  <button class="kd-btn kd-btn--primary" type="button">쿼리 실행</button>
+</body>
+```
+
+- 테마는 시스템 설정(라이트/다크)을 자동으로 따릅니다. 고정하려면 `<html data-theme="light">` 또는 `data-theme="dark"`를 지정합니다.
+- 텍스트 스타일은 `kd-type-body`, `kd-type-heading-1`처럼 클래스로 적용합니다.
+- 색은 `var(--text)`, `var(--surface)`, `var(--accent-strong)` 같은 시맨틱 토큰만 씁니다. `--brand-*`, `--ink-*` 원시 스케일은 직접 쓰지 않습니다.
+
+### 토큰 수정
+
+`tokens.json`을 고친 뒤 다음을 실행해 `tokens.css`를 다시 생성합니다.
+
+```sh
+python3 design-system/build_css.py
+```

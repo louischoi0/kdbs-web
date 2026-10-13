@@ -1,0 +1,177 @@
+/* KDBS design tokens — generated from tokens.json by build_css.py. Do not edit by hand. */
+
+@font-face {
+  font-family: "Sora";
+  src: url("fonts/Sora-Variable.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard Variable";
+  src: url("fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono-Variable.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+  --font-display: Sora, "Pretendard Variable", system-ui, sans-serif;
+  --font-sans: "Pretendard Variable", Pretendard, system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root,
+[data-theme="light"] {
+  --brand-50: #FFF2EF;
+  --brand-100: #FFE0D9;
+  --brand-200: #FEC0B1;
+  --brand-300: #FE927A;
+  --brand-400: #FE5F3F;
+  --brand-500: #E8380D;
+  --brand-600: #C22A03;
+  --brand-700: #9C1D00;
+  --brand-800: #771400;
+  --brand-900: #550800;
+  --ink-50: #F4F7FB;
+  --ink-100: #E9EDF4;
+  --ink-200: #D5DBE6;
+  --ink-300: #B5BECF;
+  --ink-400: #8892A8;
+  --ink-500: #5D6982;
+  --ink-600: #42506A;
+  --ink-700: #2F3D59;
+  --ink-800: #1F2D4A;
+  --ink-900: #14213D;
+  --ink-950: #08122A;
+  --bg: #FFFFFF;
+  --surface: #F4F7FB;
+  --surface-raised: #FFFFFF;
+  --surface-sunken: #E9EDF4;
+  --border: #D5DBE6;
+  --border-strong: #8892A8;
+  --text: #14213D;
+  --text-muted: #5D6982;
+  --on-accent: #FFFFFF;
+  --accent: #E8380D;
+  --accent-strong: #C22A03;
+  --accent-strong-hover: #9C1D00;
+  --accent-text: #C22A03;
+  --accent-subtle: #FFF2EF;
+  --focus-ring: #E8380D;
+  --code-bg: #14213D;
+  --code-text: #F4F7FB;
+  --code-accent: #FE927A;
+  --code-string: #9FE3B8;
+  --code-number: #F5C26B;
+  --code-comment: #B5BECF;
+  --success: #12784A;
+  --success-subtle: #E7F6EE;
+  --warning: #8A5300;
+  --warning-subtle: #FFF4DB;
+  --danger: #B4123B;
+  --danger-subtle: #FDECEF;
+  --info: #1D5FD1;
+  --info-subtle: #EAF1FE;
+  --shadow-sm: 0 1px 2px rgba(20, 33, 61, 0.08);
+  --shadow-md: 0 4px 16px rgba(20, 33, 61, 0.10);
+  --shadow-lg: 0 12px 40px rgba(20, 33, 61, 0.16);
+}
+
+[data-theme="dark"] {
+  --bg: #08122A;
+  --surface: #14213D;
+  --surface-raised: #1F2D4A;
+  --surface-sunken: #0A1222;
+  --border: #2F3D59;
+  --text: #F4F7FB;
+  --text-muted: #B5BECF;
+  --accent-text: #FE927A;
+  --accent-subtle: #E8380D26;
+  --focus-ring: #FE5F3F;
+  --code-bg: #0A1222;
+  --success: #4ADE9A;
+  --success-subtle: #0E2A1F;
+  --warning: #F5B83D;
+  --warning-subtle: #2E2210;
+  --danger: #FF7A93;
+  --danger-subtle: #33121B;
+  --info: #7AA7FF;
+  --info-subtle: #10203F;
+  --shadow-sm: none;
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.40);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.55);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #08122A;
+    --surface: #14213D;
+    --surface-raised: #1F2D4A;
+    --surface-sunken: #0A1222;
+    --border: #2F3D59;
+    --text: #F4F7FB;
+    --text-muted: #B5BECF;
+    --accent-text: #FE927A;
+    --accent-subtle: #E8380D26;
+    --focus-ring: #FE5F3F;
+    --code-bg: #0A1222;
+    --success: #4ADE9A;
+    --success-subtle: #0E2A1F;
+    --warning: #F5B83D;
+    --warning-subtle: #2E2210;
+    --danger: #FF7A93;
+    --danger-subtle: #33121B;
+    --info: #7AA7FF;
+    --info-subtle: #10203F;
+    --shadow-sm: none;
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.40);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.55);
+  }
+}
+
+.kd-type-display-xl { font-family: var(--font-display); font-size: 56px; line-height: 64px; font-weight: 700; letter-spacing: -0.02em; }
+
+.kd-type-display-l { font-family: var(--font-display); font-size: 40px; line-height: 48px; font-weight: 700; letter-spacing: -0.015em; }
+
+.kd-type-heading-1 { font-family: var(--font-display); font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: -0.01em; }
+
+.kd-type-heading-2 { font-family: var(--font-display); font-size: 24px; line-height: 32px; font-weight: 600; }
+
+.kd-type-heading-3 { font-family: var(--font-sans); font-size: 18px; line-height: 26px; font-weight: 600; }
+
+.kd-type-body-l { font-family: var(--font-sans); font-size: 18px; line-height: 30px; font-weight: 400; }
+
+.kd-type-body { font-family: var(--font-sans); font-size: 16px; line-height: 26px; font-weight: 400; }
+
+.kd-type-body-s { font-family: var(--font-sans); font-size: 14px; line-height: 22px; font-weight: 400; }
+
+.kd-type-label { font-family: var(--font-sans); font-size: 13px; line-height: 18px; font-weight: 500; }
+
+.kd-type-caption { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.01em; }
+
+.kd-type-code { font-family: var(--font-mono); font-size: 14px; line-height: 22px; font-weight: 400; }
+
+.kd-type-code-s { font-family: var(--font-mono); font-size: 13px; line-height: 20px; font-weight: 400; }
