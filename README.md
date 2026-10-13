@@ -22,6 +22,27 @@ KDBS 웹사이트 저장소입니다.
 
 워드마크는 Sora Bold 기반이며, 서체 설치 없이 동일하게 표시되도록 외곽선(path)으로 변환되어 있습니다.
 
+### 파비콘
+
+작은 크기에서도 형태가 뭉개지지 않도록 날개깃을 3개로 줄이고 두께를 키운 단순화 심볼을 사용합니다. 파일은 `assets/favicon/`에 있습니다.
+
+| 파일 | 용도 |
+|---|---|
+| `favicon.svg` | 브라우저 탭 (다크 모드에서 하단 깃이 흰색으로 전환) |
+| `favicon.ico` | 구형 브라우저용 (16·32·48px) |
+| `apple-touch-icon.png` | iOS 홈 화면 (180px) |
+| `icon-192.png`, `icon-512.png`, `icon-maskable-512.png` | PWA / Android |
+| `site.webmanifest` | 웹 앱 매니페스트 |
+
+사이트 배포 시 파일을 웹 루트에 두고 `<head>`에 다음을 추가합니다.
+
+```html
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+```
+
 ### 컬러
 
 | 이름 | HEX | 용도 |
