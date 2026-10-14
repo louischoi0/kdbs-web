@@ -17,6 +17,9 @@ KDBS 웹사이트 저장소입니다.
 |---|---|
 | `assets/logo/kdbs-logo.svg` | 심볼 + 워드마크, 밝은 배경용 |
 | `assets/logo/kdbs-logo-dark.svg` | 심볼 + 워드마크, 어두운 배경용 |
+| `assets/logo/kdbs-logo-vertical.svg` | 세로형 (심볼 위, 워드마크 아래), 밝은 배경용 |
+| `assets/logo/kdbs-logo-vertical-dark.svg` | 세로형, 어두운 배경용 |
+| `assets/logo/kdbs-logo-vertical.png`, `kdbs-logo-vertical-dark.png` | 세로형 PNG (너비 1024px, 투명 배경) |
 | `assets/logo/kdbs-symbol.svg` | 심볼 단독, 밝은 배경용 |
 | `assets/logo/kdbs-symbol-dark.svg` | 심볼 단독, 어두운 배경용 |
 
