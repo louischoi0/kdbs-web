@@ -31,7 +31,7 @@ GitHub, X, LinkedIn 등 프로필 사진용 아이콘입니다. 파비콘과 같
 | `assets/profile/kdbs-profile.svg` | 흰 배경 (기본) |
 | `assets/profile/kdbs-profile-dark.svg` | 잉크 네이비 배경 |
 
-SVG 업로드를 지원하지 않는 서비스에는 PNG로 변환해 올립니다(512×512).
+SVG 업로드를 지원하지 않는 서비스에는 PNG를 씁니다. X용 400×400 PNG: `kdbs-profile-x.png`, `kdbs-profile-dark-x.png`.
 
 ### 파비콘
 
